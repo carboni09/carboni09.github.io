@@ -3,15 +3,13 @@ info:
   title: AgiliumTrade MetaTrader client REST API
   version: 1.0.0
 servers:
-- url: https://mt-client-api-v1.new-york.agiliumtrade.ai
+- url: https://mt-client-api-v1.new-york.agiliumtrade.ai/
+  description: host endpoint
 paths:
-  /users/current/accounts/{accountId}/account-information:
+  /users/current/accounts/{accountId}/accountInformation:
     get:
       summary: Returns account information for a trading account
-      description: >-
-        Returns account information for a trading account. Requires access to
-        metaapi-api:rest:public:terminal-state:getAccountInformation method
-        which is included into reader role. Requires access to account resource.
+      description: Returns account information for a trading account. Requires access to metaapi-api:rest:public:terminal-state:getAccountInformation method which is included into reader role. Requires access to account resource.
       parameters:
         - name: auth-token
           in: header
@@ -27,16 +25,12 @@ paths:
             type: string
         - name: refreshTerminalState
           in: query
-          description: >-
-            Whether to refresh terminal state before retrieving the data,
-            slowing down the request
+          description: Whether to refresh terminal state before retrieving the data, slowing down the request
           schema:
             type: boolean
       responses:
         "200":
-          description: >-
-            Account information for a specified MetaTrader account returned
-            successfully
+          description: Account information for a specified MetaTrader account returned successfully
           content:
             application/json:
               schema:
@@ -48,9 +42,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
         "403":
-          description: >-
-            Authorization token has no access to
-            metaapi-api:rest:public:terminal-state:getAccountInformation method.
+          description: Authorization token has no access to metaapi-api:rest:public:terminal-state:getAccountInformation method.
           content:
             application/json:
               schema:
