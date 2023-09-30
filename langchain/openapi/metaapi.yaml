@@ -3,7 +3,7 @@ info:
   title: AgiliumTrade MetaTrader client REST API
   version: 1.0.0
 servers:
-- url: https://mt-client-api-v1.new-york.agiliumtrade.ai/users/current/accounts/{accountId}/
+- url: https://mt-client-api-v1.new-york.agiliumtrade.ai
 paths:
   /usage-statistics:
     get:
