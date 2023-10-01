@@ -3,10 +3,10 @@ info:
   title: AgiliumTrade MetaTrader client REST API
   version: 1.0.0
 servers:
-- url: https://mt-client-api-v1.new-york.agiliumtrade.ai/
+- url: https://mt-client-api-v1.new-york.agiliumtrade.ai/users/current/accounts/f6af3f68-a5b0-4071-a4c3-262c01e5fcaa/
   description: host endpoint
 paths:
-  /users/current/accounts/{accountId}/accountInformation:
+  /accountInformation:
     get:
       operationId: getAccountInformation
       summary: Returns account information for a trading account
