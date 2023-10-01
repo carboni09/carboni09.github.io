@@ -8,6 +8,7 @@ servers:
 paths:
   /users/current/accounts/{accountId}/accountInformation:
     get:
+      operationId: getAccountInformation
       summary: Returns account information for a trading account
       description: Returns account information for a trading account. Requires access to metaapi-api:rest:public:terminal-state:getAccountInformation method which is included into reader role. Requires access to account resource.
       parameters:
