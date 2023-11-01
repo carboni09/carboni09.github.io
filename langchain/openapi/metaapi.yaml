@@ -6,7 +6,7 @@ servers:
 - url: https://mt-client-api-v1.new-york.agiliumtrade.ai/
   description: host endpoint
 paths:
-  /users/current/accounts/{accountId}/accountInformation:
+  /users/current/accounts/54b3a684-7949-4631-8dd5-e43d23ba3bd5/accountInformation:
     get:
       operationId: getAccountInformation
       summary: Returns account information for a trading account
